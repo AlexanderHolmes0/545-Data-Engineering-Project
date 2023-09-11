@@ -1,0 +1,80 @@
+Meet with your team to discuss the details of how you are going to 
+approach the group assignment. The more details you provide the higher
+the chance of getting credit for this bonus assignment. 
+
+Make sure you review the project overview PDF
+https://utk.instructure.com/courses/180504/files/17718372?wrap=1
+
+Note: this is an initial plan; it will likely change as you into things
+      try and make your plan as accurate/realistic as possible.
+
+TO GET CREDIT!
+* Fill in answers on one team members computer
+* Share file to all team members
+* Open a pull request to *your* bonus repo (ie the one named firstname-lastname-bonus-repo)
+
+------------
+
+Question 1:
+How often are you going to meet?
+We will meet weekly at a minimum of twice a week from 10 to 11 on Monday and Wednesday. When deadlines are approaching we 
+will increase this frequency as needed. 
+
+Question 2:
+Which tools and communication technology are you going to use?
+GroupMe, Discord, Google Suite, Github, VSCode, Python, POSTGRES SQL, and BASH will be the technologies of choice for both 
+completing the project and communicating aspects about the project.
+ 
+Question 3:
+Who is going to complete which tasks?
+Alex - Create *Private* Github Repo - Done
+     - Code Review before merging pull requests into main branch
+     - Work on creating the BASH file to run the Python Script to collect data and push to a SQL DB
+Lucas - Create Python Script to collect data from the internet and push to SQL DB
+Tyler - Prepare data into a format for visualization
+      - Create API for serving data
+      - Ensure API only serves 10 records for each call
+Brennan - Meeting Notes Recording and Pull Request into meetings.txt after every meeting 
+	- Every Meeting Note should contain the following:
+		- Date, agenda, and action items
+		- with names+deadlines 
+	- Help assisting with any tasks
+	- Ensure data governance and integrity with every update to the API 
+Aria - Building data monitoring dashboards
+     - Extract Data through the API
+
+Question 4:
+What are the expected completion dates of each task?
+Github Repo - Already Done - Sep 8, 2023
+Python, BASH, PosteGres SQL Files - Nov 2, 2023
+	- Show and tell
+Final Presentation - Nov 30, 2023
+Meetings.txt - Before Final Presesentation - Nov 30, 2023
+
+Question 5:
+Who is going to be the repo owner?
+Alexander Holmes - GitHub Name - AlexanderHolmes0
+
+Question 6:
+What is your process to accomplish tasks and review code?
+Team members will work on completing the tasks as assigned and open pull requests 
+Alex will review code before it is merged with the main branch
+If files do not work as intended then the pull request will not be merged into the main branch
+
+Question 7:
+How are you going to hold each team member accountable to stay on top of their tasks?
+If a team member does not follow through, then other team members will pick up the slack.
+Adam will be notified of this team members lack of contribution/follow through.
+Weekly check-ins on progress for each assigned task will be done to ensure team members are timely in completion.
+
+Question 9:
+Ensure your repo owner has:
+* created a *private* repo
+* added all team members as collaborators
+* added AdamSpannbauer and abdullah-salau as collaborators
+* optional (but encouraged) extra step: protect the main branch from being committed to directly
+
+* all the above have been accomplished in the group project private repo
+
+Provide a link to your group's repo below when those steps have been completed
+https://github.com/AlexanderHolmes0/545GroupProject
