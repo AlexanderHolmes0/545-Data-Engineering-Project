@@ -42,6 +42,7 @@ url_object = sqlalchemy.URL.create(
     password=password,
     host=host,
     database=database,
+    port=port,
 )
 
 engine = sqlalchemy.create_engine(url_object)
