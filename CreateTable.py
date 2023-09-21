@@ -22,7 +22,7 @@ engine = sqlalchemy.create_engine(connection_string)
 metadata = MetaData()
 
 
-eatures = Table(
+features = Table(
     "Feature_Store",
     metadata,
     Column("index", Integer, primary_key=True, autoincrement=True),
