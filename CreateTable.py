@@ -33,5 +33,15 @@ features = Table(
     Column("discount", sqlalchemy.DECIMAL(3, 2)),
     Column("itemssold", Integer),
 )
+
 pd.read_sql("SHOW TABLES;", engine)
+
+pd.read_sql("SELECT * FROM Feature_Store;", engine)
+
+pd.read_sql("ALTER TABLE Feature_Store ADD error_code VARCHAR(255);", engine)
+
+
+con = engine.connect()
+
+
 metadata.create_all(engine)
