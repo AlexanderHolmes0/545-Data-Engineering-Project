@@ -34,6 +34,7 @@ features = Table(
     Column("itemssold", Integer),
 )
 
+
 pd.read_sql("SHOW TABLES;", engine)
 
 pd.read_sql("SELECT * FROM Feature_Store;", engine)

@@ -1,11 +1,12 @@
 from numpy import datetime64
 import pandas as pd
 import sqlalchemy
-from sqlalchemy import text
+from sqlalchemy import Column, Integer, MetaData, Table, text
 
 # pymysql is not explicitly used but needed
 import pymysql
 import os
+
 import sys
 import requests
 
@@ -35,6 +36,7 @@ url_object = sqlalchemy.URL.create(
 )
 
 engine = sqlalchemy.create_engine(url_object)
+
 
 con = engine.connect()  # connect to db
 
@@ -109,5 +111,6 @@ except:
     con.commit()
 
 
-# disconnect from db
+
+# Read from db
 engine.dispose()
