@@ -31,3 +31,15 @@ jobs:
           API_USER: ${{ secrets.API_USER }}
           API_PASSWORD: ${{ secrets.API_PASSWORD }}
         run: python main.py
+
+      - name: Send some mail
+        uses: wadeww/send-email-action@master
+        with:
+          server_address: smtp.gmail.com
+          port: 465
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
+          subject: BZAN 545 Github Action Complete
+          body: Job status - ${{job.status}}
+          to: aholme27@vols.utk.edu, tdykes2@vols.utk.edu, asajjad@vols.utk.edu
+          from: alexgronkowski6@gmail.com
