@@ -6,14 +6,13 @@ from sqlalchemy import Column, Integer, MetaData, Table, text
 # pymysql is not explicitly used but needed
 import pymysql
 import os
-
 import sys
 import requests
 
 
 def exit_program():
     print("Exiting the program...")
-    sys.exit(1)
+    sys.exit(0)
 
 
 try:
@@ -109,7 +108,6 @@ except:
         ).bindparams(x=x)
     )
     con.commit()
-
 
 
 # Read from db
