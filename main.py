@@ -36,6 +36,8 @@ url_object = sqlalchemy.URL.create(
 
 engine = sqlalchemy.create_engine(url_object)
 
+pd.read_sql("SELECT * FROM Feature_Store;", engine).to_csv("backup.csv", index=False)
+
 
 con = engine.connect()  # connect to db
 
