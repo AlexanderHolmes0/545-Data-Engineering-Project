@@ -11,6 +11,8 @@ jobs:
 
       - name: checkout repo content
         uses: actions/checkout@v4 # checkout the repository content
+        with: 
+          token: ${{ secrets.BOT_ACCESS_TOKEN }}
 
       - name: setup python
         uses: actions/setup-python@v4
@@ -32,14 +34,25 @@ jobs:
           API_PASSWORD: ${{ secrets.API_PASSWORD }}
         run: python main.py
 
-      - name: Send some mail
-        uses: wadeww/send-email-action@master
+      - name: Commit and push if the database changed
+        if: always()
+        run: |-
+          git config user.name "BZAN-545-BOT"
+          git config user.email "146564899+BZAN-545-BOT@users.noreply.github.com"
+          git add backup.csv
+          timestamp=$(date -u)
+          git commit -m "Latest Database: ${timestamp}" || exit 0
+          git push
+          
+      - name: Send mails
+        if: always()
+        uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
-          port: 465
-          username: ${{secrets.MAIL_USERNAME}}
-          password: ${{secrets.MAIL_PASSWORD}}
-          subject: BZAN 545 Github Action Complete
-          body: Job status - ${{job.status}}
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+          body: ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
           to: aholme27@vols.utk.edu, tdykes2@vols.utk.edu, asajjad@vols.utk.edu
-          from: alexgronkowski6@gmail.com
+          from: GitHub Actions
