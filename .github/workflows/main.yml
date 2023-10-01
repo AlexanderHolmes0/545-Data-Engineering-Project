@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4 # checkout the repository content
         with: 
           fetch-depth: 0
-          ref: main
+          persist-credentials: false
           token: ${{ env.GH_TOKEN }}
 
       - name: setup python
