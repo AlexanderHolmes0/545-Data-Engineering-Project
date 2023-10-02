@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: '0 5 * * *' # At 05:00 on daily
 
-env: 
-  GH_TOKEN: ${{ secrets.BOT_ACCESS_TOKEN }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,9 +12,7 @@ jobs:
       - name: checkout repo content
         uses: actions/checkout@v4 # checkout the repository content
         with: 
-          fetch-depth: 0
-          persist-credentials: false
-          token: ${{ env.GH_TOKEN }}
+          token: ${{ secrets.BOT_ACCESS_TOKEN }}
 
       - name: setup python
         uses: actions/setup-python@v4
@@ -42,8 +37,8 @@ jobs:
       - name: Commit and push if the database changed
         if: always()
         run: |-
-          git config user.name "BZAN-545-BOT"
-          git config user.email "146564899+BZAN-545-BOT@users.noreply.github.com"
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add backup.csv
           timestamp=$(date -u)
           git commit -m "Latest Database: ${timestamp}" || exit 0
