@@ -53,6 +53,6 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
-          body: ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
-          to: aholme27@vols.utk.edu, tdykes2@vols.utk.edu, asajjad@vols.utk.edu
+          body: ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} has great ${{ job.status }}!
+          to: aholme27@vols.utk.edu, tdykes2@vols.utk.edu, asajjad@vols.utk.edu, lmcpherr@vols.utk.edu
           from: GitHub Actions
