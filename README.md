@@ -1,9 +1,5 @@
-# 545GroupProject
-
-[![run main.py](https://github.com/AlexanderHolmes0/545GroupProject/actions/workflows/main.yml/badge.svg?event=schedule)](https://github.com/AlexanderHolmes0/545GroupProject/actions/workflows/main.yml)
-
 # 545 Group Project Repository
-
+[![run main.py](https://github.com/AlexanderHolmes0/545GroupProject/actions/workflows/main.yml/badge.svg?event=schedule)](https://github.com/AlexanderHolmes0/545GroupProject/actions/workflows/main.yml)
 ## Overview
 
 Welcome to the 545 Group Project repository! This repository is dedicated to the DevOps and Data Engineering aspects of our project. Here, you will find everything you need to set up, manage, and deploy our project infrastructure and data pipelines
