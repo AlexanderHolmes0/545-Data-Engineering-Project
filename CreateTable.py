@@ -28,8 +28,8 @@ features = Table(
     Column("index", Integer, primary_key=True, autoincrement=True),
     Column("salesdate", sqlalchemy.Date),
     Column("productid", Integer),
-    Column("region", sqlalchemy.CHAR(4)),
-    Column("freeship", sqlalchemy.CHAR(5)),
+    Column("region", sqlalchemy.CHAR(1)),
+    Column("freeship", sqlalchemy.BOOLEAN),
     Column("discount", sqlalchemy.DECIMAL(3, 2)),
     Column("itemssold", Integer),
 )
