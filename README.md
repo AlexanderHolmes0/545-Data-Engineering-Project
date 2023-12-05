@@ -18,7 +18,7 @@ The backup of our database is run before new records are inserted at midnight ES
 
 ## Scraping Python 
 
-The Python script that scrapes data from a website checks the data, and then inserts it into an Aiven database is in the file named [main.py](main,py).
+The Python script that scrapes data from a website checks the data, and then inserts it into an Aiven database is in the file named [main.py](main.py).
 
 ## Meeting Notes
 
