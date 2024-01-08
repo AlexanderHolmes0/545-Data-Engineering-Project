@@ -9,7 +9,7 @@ app = Flask(__name__)
 db_config = {
     "host": "mysql-33ef51dc-vols-84b2.aivencloud.com",
     "user": "api_user",
-    "password": "AVNS_w6y7xShxpFkY3GBICIc",
+    "password": "REDACTED",
     "database": "defaultdb",
     "port": "23825",
 }
